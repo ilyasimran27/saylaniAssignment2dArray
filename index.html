@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Percentage cheker</h1>
+    <input type="number" id="inpt" placeholder="please enter the marks"></input>
+    <h2>Grade is</h2>
+    <h3 id="percentage"></h3>
+    <button onclick="checkPercentage()">Check Percentage</button>
+</body>
+<script>
+    function checkPercentage(){
+        var grade=""
+        var percentage=Number(document.getElementById("inpt").value)
+        if (percentage >= 80) {
+                grade = 'A+';
+            }
+            else if (percentage < 80 && percentage >= 70) {
+                grade = 'A';
+            }
+            else if (percentage < 70 && percentage >= 60) {
+                grade = 'B';
+            }
+            else if (percentage < 60 && percentage >= 50) {
+                grade = 'C';
+            }
+            else if (percentage < 50) {
+                grade = 'Fail';
+            }
+            console.log('percentage function calling',grade)
+            document.getElementById("percentage").innerHTML=grade
+
+    }
+</script>
+</html>
